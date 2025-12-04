@@ -6,6 +6,8 @@ import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { supabase } from '../lib/supabase';
 
+import { TestimonialsMarquee } from '../components/TestimonialsMarquee';
+
 export const Home = () => {
     const [testimonials, setTestimonials] = useState<any[]>([]);
 
@@ -14,7 +16,7 @@ export const Home = () => {
             const { data } = await supabase
                 .from('testimonials')
                 .select('*')
-                .limit(3);
+                .limit(5);
             if (data) setTestimonials(data);
         };
         fetchTestimonials();
@@ -194,35 +196,14 @@ export const Home = () => {
                 </div>
             </section>
 
+
+
             {/* Testimonials */}
             {testimonials.length > 0 && (
                 <section className="py-24 bg-surface/30">
                     <div className="container mx-auto px-6">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">What founders say</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {testimonials.map((t) => (
-                                <Card key={t.id} className="p-8">
-                                    <div className="mb-6">
-                                        <div className="text-primary text-4xl font-serif">"</div>
-                                        <p className="text-lg text-white italic relative z-10 -mt-4">{t.quote}</p>
-                                    </div>
-                                    <div className="flex items-center gap-4">
-                                        {t.avatar_url && (
-                                            <img src={t.avatar_url} alt={t.name} className="w-12 h-12 rounded-full object-cover" />
-                                        )}
-                                        <div>
-                                            <div className="font-bold text-white">{t.name}</div>
-                                            <div className="text-sm text-text-secondary">{t.role}, {t.company}</div>
-                                        </div>
-                                    </div>
-                                    {t.highlight_result && (
-                                        <div className="mt-6 pt-4 border-t border-white/10 text-sm font-medium text-primary-light">
-                                            🚀 {t.highlight_result}
-                                        </div>
-                                    )}
-                                </Card>
-                            ))}
-                        </div>
+                        <TestimonialsMarquee testimonials={testimonials} />
                     </div>
                 </section>
             )}
