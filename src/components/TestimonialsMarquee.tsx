@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Card } from './Card';
 
 interface Testimonial {
@@ -15,12 +16,22 @@ interface TestimonialsMarqueeProps {
 }
 
 export const TestimonialsMarquee = ({ testimonials }: TestimonialsMarqueeProps) => {
+    const [isPaused, setIsPaused] = useState(false);
     // Duplicate testimonials to ensure seamless scrolling
     const allTestimonials = [...testimonials, ...testimonials];
 
     return (
-        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-            <div className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-scroll hover:[animation-play-state:paused]">
+        <div
+            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+        >
+            <div
+                className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-scroll"
+                style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+            >
                 {allTestimonials.map((t, index) => (
                     <div key={`${t.id}-${index}`} className="mx-4 w-[350px] flex-shrink-0">
                         <Card className="p-8 h-full">
