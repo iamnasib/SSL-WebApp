@@ -45,7 +45,6 @@ export const TestimonialsMarquee = ({ testimonials }: TestimonialsMarqueeProps) 
                                 )}
                                 <div>
                                     <div className="font-bold text-white">{t.name}</div>
-                                    <div className="text-sm text-text-secondary">{t.role}, {t.company}</div>
                                 </div>
                             </div>
                             {/* {t.highlight_result && (

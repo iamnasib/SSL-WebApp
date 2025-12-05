@@ -62,7 +62,7 @@ export const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-white mb-1">Email</h3>
-                                    <p className="text-text-secondary">hello@sprintstacklabs.com</p>
+                                    <p className="text-text-secondary">{import.meta.env.VITE_CONTACT_EMAIL}</p>
                                     <p className="text-text-muted text-sm mt-1">We usually reply within 24 hours.</p>
                                 </div>
                             </div>
@@ -73,12 +73,11 @@ export const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
-                                    <p className="text-text-secondary">+1 (555) 123-4567</p>
-                                    <p className="text-text-muted text-sm mt-1">Mon-Fri from 9am to 6pm EST.</p>
+                                    <p className="text-text-secondary">+91 8082404133, +91 9797060443</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-start space-x-4">
+                            {/* <div className="flex items-start space-x-4">
                                 <div className="bg-primary/10 p-3 rounded-lg text-primary">
                                     <MapPin className="w-6 h-6" />
                                 </div>
@@ -89,7 +88,7 @@ export const Contact = () => {
                                         Tech City, TC 90210
                                     </p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

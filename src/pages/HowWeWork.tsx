@@ -8,7 +8,7 @@ const steps = [
     {
         icon: Search,
         title: 'Discovery & Architecture',
-        desc: 'We start with a deep understanding of your product goals, user needs, and vision. Through a strategy call and structured planning, we finalize user flows, wireframes, and determine the best build approach — No-code, Low-code, or Custom Development.',
+        desc: 'We start with a deep understanding of your product goals, user needs, and vision. Through a strategy call and structured planning, we finalize user flows, wireframes, and determine the best build approach whether through No-code, Low-code, or Custom Development.',
         duration: 'Week 1'
     },
     {
@@ -20,7 +20,7 @@ const steps = [
     {
         icon: Code,
         title: 'Feature Development',
-        desc: 'We build the main product features using a hybrid development approach. This ensures fast delivery, flexibility, and long-term maintainability — whether through automation, visual development, or coded components.',
+        desc: 'We build the main product features using a hybrid development approach. This ensures fast delivery, flexibility, and long-term maintainability whether through automation, visual development, or coded components.',
         duration: 'Weeks 3-5'
     },
     {
@@ -101,7 +101,7 @@ export const HowWeWork = () => {
 
             <div className="text-center mt-8 px-4">
                 <p className="text-text-secondary/80 italic text-sm">
-                    * Timelines vary based on product scope, every build is tailored to what the project truly needs.
+                    * Timelines depend on the size and complexity of your product, and we choose the tech stack that best supports your long-term success.
                 </p>
             </div>
 

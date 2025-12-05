@@ -77,7 +77,7 @@ export const Navbar = () => {
                                 <Link
                                     key={link.path}
                                     to={link.path}
-                                    className="text-text-secondary hover:text-white py-2"
+                                    className={`py-2 transition-colors hover:text-white ${location.pathname === link.path ? 'text-white font-medium' : 'text-text-secondary'}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}

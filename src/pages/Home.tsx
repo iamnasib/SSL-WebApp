@@ -186,7 +186,7 @@ export const Home = () => {
                                         </div>
 
                                         <p className="text-xs text-text-muted/80 italic pt-2">
-                                            * Timelines vary based on product scope, every build is tailored to what the project truly needs.
+                                            * Timelines depend on the size and complexity of your product, and we choose the tech stack that best supports your long-term success.
                                         </p>
                                     </div>
                                 </Card>

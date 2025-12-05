@@ -60,12 +60,12 @@ export const CaseStudies = () => {
                                     ))}
                                 </div>
                                 <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-                                <p className="text-text-secondary mb-6 line-clamp-3">
+                                <p className="text-text-secondary">
                                     {project.description}
                                 </p>
-                                <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
+                                {/* <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
                                     View Details <ExternalLink className="w-4 h-4 ml-2" />
-                                </Button>
+                                </Button> */}
                             </div>
                         </Card>
                     ))}

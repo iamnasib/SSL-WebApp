@@ -41,9 +41,7 @@ export const Footer = () => {
                     <div>
                         <h4 className="text-white font-semibold mb-4">Connect</h4>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-text-secondary hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-                            <a href="#" className="text-text-secondary hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
-                            <a href="#" className="text-text-secondary hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+                            <a href="https://www.linkedin.com/in/sprintstacklabs/" className="text-text-secondary hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
                         </div>
                     </div>
                 </div>
@@ -51,8 +49,8 @@ export const Footer = () => {
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-text-muted">
                     <p>&copy; {new Date().getFullYear()} Sprint Stack Labs. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
