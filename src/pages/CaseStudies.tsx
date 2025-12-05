@@ -3,7 +3,6 @@ import { supabase } from '../lib/supabase';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
 
 export const CaseStudies = () => {
     const [projects, setProjects] = useState<any[]>([]);

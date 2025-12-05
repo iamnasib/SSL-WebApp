@@ -5,7 +5,7 @@ import { contactSchema, type ContactData } from '../lib/schemas';
 import { supabase } from '../lib/supabase';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
-import { Mail, MapPin, Phone, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
