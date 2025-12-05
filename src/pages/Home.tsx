@@ -36,7 +36,7 @@ export const Home = () => {
                             transition={{ duration: 0.5 }}
                         >
                             <span className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-primary-light mb-6">
-                                Build smarter, ship faster
+                                Build smarter, ship faster, spend less.
                             </span>
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
                                 Build your MVP or SaaS <br />
