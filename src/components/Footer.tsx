@@ -41,7 +41,7 @@ export const Footer = () => {
                     <div>
                         <h4 className="text-white font-semibold mb-4">Connect</h4>
                         <div className="flex space-x-4">
-                            <a href={import.meta.env.VITE_LINKEDIN_URL} className="text-text-secondary hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+                            <a href={import.meta.env.VITE_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
                         </div>
                     </div>
                 </div>
