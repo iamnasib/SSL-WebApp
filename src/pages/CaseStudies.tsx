@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
+import { ExternalLink } from 'lucide-react';
 
 export const CaseStudies = () => {
     const [projects, setProjects] = useState<any[]>([]);
@@ -40,16 +41,6 @@ export const CaseStudies = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project) => (
                         <Card key={project.id} className="overflow-hidden group">
-                            {project.image_url && (
-                                <div className="h-64 overflow-hidden relative">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60 z-10" />
-                                    <img
-                                        src={project.image_url}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                </div>
-                            )}
                             <div className="p-8">
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags?.map((tag: string) => (
@@ -62,9 +53,11 @@ export const CaseStudies = () => {
                                 <p className="text-text-secondary">
                                     {project.description}
                                 </p>
-                                {/* <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
-                                    View Details <ExternalLink className="w-4 h-4 ml-2" />
-                                </Button> */}
+                                {project.project_url && (
+                                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all mt-4">
+                                        <a href={project.project_url} target="_blank" rel="noopener noreferrer" className="flex items-center">View Details <ExternalLink className="w-4 h-4 ml-2" /></a>
+                                    </Button>
+                                )}
                             </div>
                         </Card>
                     ))}

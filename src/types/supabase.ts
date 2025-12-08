@@ -99,7 +99,7 @@ export interface Database {
                     id: string
                     title: string
                     description: string
-                    image_url: string | null
+                    project_url: string | null
                     tags: string[] | null
                     created_at: string
                 }
@@ -107,7 +107,7 @@ export interface Database {
                     id?: string
                     title: string
                     description: string
-                    image_url?: string | null
+                    project_url?: string | null
                     tags?: string[] | null
                     created_at?: string
                 }
@@ -115,7 +115,7 @@ export interface Database {
                     id?: string
                     title?: string
                     description?: string
-                    image_url?: string | null
+                    project_url?: string | null
                     tags?: string[] | null
                     created_at?: string
                 }
