@@ -42,7 +42,7 @@ export const CaseStudies = () => {
                     {projects.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {projects.map((project) => (
-                                <Card key={project.id} className="overflow-hidden group">
+                                <Card key={project.id} className="p-0 overflow-hidden group">
                                     <div className="p-8">
                                         <div className="flex flex-wrap gap-2 mb-4">
                                             {project.tags?.map((tag: string) => (
